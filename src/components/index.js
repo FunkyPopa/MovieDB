@@ -1,0 +1,8 @@
+export * from './Header/Header'
+export * from './Genre badge/GenreBadge'
+export * from './Movie info/MovieInfo'
+export * from './Movies list/MoviesList'
+export * from './User info/UserInfo'
+export * from './Movies list card/MoviesListCard'
+export * from './Poster preview/PosterPreview'
+export * from './Stars rating/StarsRating'
