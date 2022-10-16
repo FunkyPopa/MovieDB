@@ -1,9 +1,9 @@
-import {MainLayout} from "./layout/MainLayout";
+import {MoviesList} from "./components";
 
 function App() {
   return (
     <div className="App">
-        <MainLayout/>
+        <MoviesList/>
     </div>
   );
 }
