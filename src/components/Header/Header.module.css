@@ -1,0 +1,17 @@
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header {
+    height: 100px;
+    background: white;
+    border-bottom: black 1px solid;
+
+    display: flex;
+}
+
+.btn {
+    height: 20px;
+    margin: 10px;
+}
