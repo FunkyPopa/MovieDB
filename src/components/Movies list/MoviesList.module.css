@@ -6,3 +6,18 @@
     justify-content: center;
     
 }
+
+.btnWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    height: 50px;
+    width: 200px;
+
+    margin: 10px;
+
+    border: 1px black solid;
+    background: orange;
+}

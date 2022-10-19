@@ -1,17 +1,19 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, current} from "@reduxjs/toolkit";
+
 import {movieService} from "../../services";
+
 
 const initialState = {
     movies: [],
     error: null,
-    loading: false
+    loading: false,
 };
 
 const getAll = createAsyncThunk(
-   "carSlice/getAll",
-    async (_, {rejectWithValue}) => {
+   "moviesSlice/getAll",
+    async (setQuery, {rejectWithValue}) => {
        try {
-           const {data} = await movieService.getMovies();
+           const {data} = await movieService.getAll(setQuery);
            return data.results;
        }catch (e) {
             return rejectWithValue(e.response.data);
