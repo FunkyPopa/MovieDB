@@ -12,13 +12,13 @@ const getAll = createAsyncThunk(
     async (_, {rejectWithValue}) => {
         try {
           const {data} = await genreService.getAll();
-          return  data.genres;
+          return data.genres;
         }catch (e) {
             return rejectWithValue(e.response.data);
         }
     }
-
 );
+
 
 
 const genresSlice = createSlice( {

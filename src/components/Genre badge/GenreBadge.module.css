@@ -1,0 +1,28 @@
+.genreBadge {
+    height: 197px;
+    position: absolute;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.genre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px;
+    border-radius: 10px;
+    background: orange;
+    color: white;
+    opacity: 0.8;
+
+    width: 100px;
+    height: 20px;
+
+    font-size: 12px;
+
+
+}

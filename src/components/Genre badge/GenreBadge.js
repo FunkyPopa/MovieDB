@@ -1,21 +1,12 @@
-import {useEffect} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {genreActions} from "../../store";
+import css from './GenreBadge.module.css'
 
-const GenreBadge = () => {
-    const {genres} = useSelector(state => state.genreReducer);
-    const {movies} = useSelector(state => state.movieReducer);
-    const dispatch = useDispatch();
-
-
-
-    useEffect(() => {
-        dispatch(genreActions.getAll())
-    }, [dispatch])
+const GenreBadge = ({genreOfMovie}) => {
 
     return(
-        <div>
-            {genres.map(genre => <p>{genre.id === movies}</p>)}
+        <div className={css.genreBadge}>
+            {
+                genreOfMovie.map(genre => <div className={css.genre}>{genre}</div>)
+            }
         </div>
     )
 }
