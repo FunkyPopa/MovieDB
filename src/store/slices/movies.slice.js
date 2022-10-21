@@ -7,7 +7,7 @@ const initialState = {
     movies: [],
     error: null,
     loading: false,
-    sss: []
+    hideButton: false
 };
 
 const getAll = createAsyncThunk(
@@ -27,7 +27,6 @@ const search = createAsyncThunk(
   async (query, {rejectWithValue}) => {
         try {
             const {data} = await movieService.search(query);
-            console.log(query)
             return data.results
         }catch (e) {
             return rejectWithValue(e.response.data);
@@ -47,14 +46,16 @@ const moviesSlice = createSlice({
                 state.movies = action.payload;
                 state.error = null;
                 state.loading = false;
-
+                state.hideButton = false;
             })
             .addCase(getAll.pending, (state, action) => {
                 state.loading = true;
                 state.error = null;
+                state.hideButton = true;
             })
             .addCase(search.fulfilled, (state, action) => {
-                state.sss = action.payload
+                state.movies = action.payload
+                state.hideButton = true;
             })
             .addDefaultCase((state, action) => {
                 const {pathElement} = action.type.split('/').splice(-1);

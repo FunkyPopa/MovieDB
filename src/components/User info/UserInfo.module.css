@@ -4,5 +4,9 @@
 }
 
 .userInfo {
-    margin-left: 200px;
+    display: flex;
+}
+
+.username {
+    margin-left: 10px;
 }

@@ -26,3 +26,11 @@
     border: 1px black solid;
     background: orange;
 }
+
+.isLoading {
+    display: flex;
+}
+
+.btnDisabled {
+    display: none;
+}

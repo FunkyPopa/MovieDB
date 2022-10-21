@@ -1,31 +1,30 @@
-import {set, useForm} from "react-hook-form";
-import {useSearchParams} from "react-router-dom";
-import {useEffect} from "react";
+import {useForm} from "react-hook-form";
+import {useDispatch} from "react-redux";
 
 import css from './Header.module.css';
-import logo from '../../img/logo.png';
 import {UserInfo} from "../User info/UserInfo";
 import {movieActions} from "../../store";
-import {useDispatch} from "react-redux";
+import {urls} from "../../config";
+import {useSearchParams} from "react-router-dom";
 
 const Header = () => {
     const {register, handleSubmit} = useForm();
-    const [query, setQuery] = useSearchParams({query: ''});
     const dispatch = useDispatch();
+    const [query] = useSearchParams({page: '1'});
 
-    useEffect(() => {
-        dispatch(movieActions.search(query.get('query')))
-    },[dispatch]);
+    console.log(query)
 
-    function submit() {
-        setQuery(value => )
+    const submit = (str) => {
+        console.log(str.query)
+        dispatch(movieActions.search(str.query))
+        !str.query.length && dispatch(movieActions.getAll(query.get('page')))
     }
 
     return(
         <div className={css.header}>
-            <img className={css.logo} src={logo} alt={logo}/>
-            <form className={css.searchForm} onSubmit={handleSubmit(submit)}>
-                <input className={css.search} type='text' {...register('search')}/>
+            <img className={css.logo} src={urls.logo} alt="movieDB logo"/>
+            <form className={css.searchForm} onChange={handleSubmit(submit)}>
+                <input className={css.search} type='text' {...register('query')}/>
             </form>
             <UserInfo/>
         </div>
