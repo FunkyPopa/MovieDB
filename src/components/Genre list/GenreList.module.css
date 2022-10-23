@@ -1,5 +1,6 @@
-.starRating {
-    padding-bottom: 5px;
+.genres {
     display: flex;
     justify-content: center;
+    position: relative;
+
 }

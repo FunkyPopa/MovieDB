@@ -1,32 +1,44 @@
 import {useForm} from "react-hook-form";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {useSearchParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 import css from './Header.module.css';
+import '../Theme style/theme.css'
 import {UserInfo} from "../User info/UserInfo";
 import {movieActions} from "../../store";
 import {urls} from "../../config";
-import {useSearchParams} from "react-router-dom";
 
-const Header = () => {
-    const {register, handleSubmit} = useForm();
+const Header = ({handleClick, theme}) => {
+    //getting state from movieReducer to hide search field
+    const {hideSearch} = useSelector(state => state.movieReducer);
+    //dispatch
     const dispatch = useDispatch();
+
+    //getting currentPage
     const [query] = useSearchParams({page: '1'});
+    //Form
+    const {register, handleSubmit} = useForm();
 
-    console.log(query)
 
+    //function which do search request
     const submit = (str) => {
-        console.log(str.query)
         dispatch(movieActions.search(str.query))
+        //if search field is clear, rerender first page
         !str.query.length && dispatch(movieActions.getAll(query.get('page')))
     }
 
     return(
-        <div className={css.header}>
+        <div className={`${css.header} ${theme}`}>
             <img className={css.logo} src={urls.logo} alt="movieDB logo"/>
-            <form className={css.searchForm} onChange={handleSubmit(submit)}>
-                <input className={css.search} type='text' {...register('query')}/>
-            </form>
+            {!hideSearch && <form onChange={handleSubmit(submit)}>
+                <input className={`${css.search} ${theme}`} type='text' {...register('query')}/>
+            </form>}
             <UserInfo/>
+            <div className={css.themeOptions}>
+                <div className={css.whiteSwitcher} onClick={() => handleClick("light")}></div>
+                <div className={css.blackSwitcher} onClick={() => handleClick("dark")}></div>
+            </div>
         </div>
     )
 }

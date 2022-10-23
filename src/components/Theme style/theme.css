@@ -1,0 +1,98 @@
+/*Light*/
+.light{
+    transition: 1s;
+}
+
+.light .Header_header__vEG9E {
+    background: white;
+    border-bottom: gray 1px solid;
+}
+
+.light .Header_search__7JU9Y {
+    background: white;
+    border: 1px gray solid;
+}
+
+.light .MoviesListCard_card__ClIFd {
+    background: white;
+}
+
+.light .MoviesListCard_title__OEpKi {
+    background: none;
+    color: black;
+}
+
+.light .MoviesListCard_date__vj64J {
+    background: none;
+    color: black;
+}
+
+.light .MovieInfo_card__UiwCF {
+    background: white;
+}
+
+.light .MovieInfo_title__b4Ruc{
+    background: none;
+    color: black;
+}
+
+.light .MovieInfo_dateAndPop__DFDHw{
+    background: none;
+    color: black;
+}
+
+.light .MovieInfo_cardFooter__s91ql{
+    background: none;
+    color: black;
+}
+
+
+/*Dark*/
+.dark{
+    background: #000000;
+    transition: 1s;
+}
+
+.dark .Header_header__vEG9E {
+    background: #131f2a;
+    border-bottom: gray 1px solid;
+}
+
+.dark .Header_search__7JU9Y {
+    background: #2d455a;
+    border: black 1px solid;
+}
+
+.dark .MoviesListCard_card__ClIFd {
+    background: #111111;
+    transition: 1s;
+}
+
+.dark .MoviesListCard_title__OEpKi {
+    background: none;
+    color: white;
+}
+
+.dark .MoviesListCard_date__vj64J {
+    background: none;
+    color: white;
+}
+
+.dark .MovieInfo_card__UiwCF {
+    background: #111111;
+}
+
+.dark .MovieInfo_title__b4Ruc{
+    background: none;
+    color: white;
+}
+
+.dark .MovieInfo_dateAndPop__DFDHw{
+    background: none;
+    color: white;
+}
+
+.dark .MovieInfo_cardFooter__s91ql{
+    background: none;
+    color: white;
+}

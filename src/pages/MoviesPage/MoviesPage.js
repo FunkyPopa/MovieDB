@@ -1,10 +1,13 @@
-import css from './MoviesPage.module.css'
 import {MoviesList} from "../../components";
+import {useOutletContext} from "react-router-dom";
+
+
 
 const MoviesPage = () => {
+    const theme = useOutletContext();
     return(
-        <div className={css.wrapper}>
-            <MoviesList/>
+        <div className={"moviePage"}>
+            <MoviesList theme={theme}/>
         </div>
     )
 }

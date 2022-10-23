@@ -1,0 +1,20 @@
+.genreBtn {
+    font-family: sans-serif;
+    margin: 10px;
+    color: #676f77;
+    background-image: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,129,255,1) 0%, rgba(3,117,207,1) 82%);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+}
+
+.genreBtn:hover {
+    cursor: pointer;
+    color: #0083FF;
+    background-size: 100% 0.1em;
+    background-position-x: 0%;
+}
+
+

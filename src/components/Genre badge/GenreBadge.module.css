@@ -1,4 +1,5 @@
 .genreBadge {
+    margin: 10px;
     height: 197px;
     position: absolute;
     left: 0;
@@ -8,6 +9,16 @@
     flex-wrap: wrap;
 }
 
+.genreRow {
+    margin: 10px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
 .genre {
     display: flex;
     justify-content: center;
@@ -15,7 +26,7 @@
 
     margin: 5px;
     border-radius: 10px;
-    background: orange;
+    background: gray;
     color: white;
     opacity: 0.8;
 
@@ -23,6 +34,4 @@
     height: 20px;
 
     font-size: 12px;
-
-
 }

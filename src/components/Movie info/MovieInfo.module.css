@@ -1,0 +1,112 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    margin: 50px;
+
+    width: 1000px;
+    border-radius: 30px;
+    display: flex;
+
+    position: relative;
+}
+
+.poster {
+    width: 350px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.NFST {
+    background: red;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    margin-left: 300px;
+}
+
+
+.cardInfo {
+    padding: 20px;
+    width: 650px;
+}
+
+.language {
+    color: #676f77;
+}
+
+.language span{
+    color: #0083FF;
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.overview {
+    width: 500px;
+    height: 300px;
+}
+
+.overview p {
+    margin: 0;
+    color: #676f77;
+}
+
+.dateAndPop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dateAndPop p {
+    margin: 0;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardFooter p {
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+}
+
+.vote {
+    padding-right: 10px;
+}
+
+.btn {
+    height: 50px;
+    width: 200px;
+
+    margin-bottom: 149px;
+
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: lightgray;
+}
+
+.NFST:hover {
+    cursor: default;
+}
+
+.btn:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,129,255,1) 0%, rgba(3,117,207,1) 82%);
+}

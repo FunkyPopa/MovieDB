@@ -1,3 +1,20 @@
+.header {
+    height: 100px;
+    background: white;
+    border-bottom: black 1px solid;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 120px;
+}
+
+
 .search {
     width: 500px;
     height: 30px;
@@ -7,27 +24,40 @@
 
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-}
-
-.header {
-    height: 100px;
-    background: white;
-    border-bottom: black 1px solid;
-
+.themeOptions {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+
 }
 
-.btn {
+.whiteSwitcher {
+    width: 20px;
     height: 20px;
-    margin: 10px;
+    border: gray 1px solid;
+    background: white;
+    border-radius: 5px;
+    margin: 5px;
 }
 
-.searchForm {
-    margin-left: 500px;
-    margin-right: 500px;
+.blackSwitcher {
+    width: 20px;
+    height: 20px;
+    border: gray 1px solid;
+    background: black;
+    border-radius: 5px;
+    margin: 5px;
 }
+
+.whiteSwitcher:hover{
+    cursor: pointer;
+}
+.blackSwitcher:hover{
+    cursor: pointer
+}
+
+.color1 {color: #000000;}
+.color2 {color: #131f2a;}
+.color3 {color: #2d455a;}
+.color6 {color: #676f77;}

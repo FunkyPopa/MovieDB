@@ -1,4 +1,14 @@
+.main {
+    width: 100%;
+}
+
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
     width: 90%;
 
     display: flex;
@@ -6,7 +16,6 @@
     justify-content: center;
 
     position: relative;
-    
 }
 
 .btnWrapper {
@@ -23,14 +32,21 @@
 
     margin: 10px;
 
-    border: 1px black solid;
-    background: orange;
+    border: 1px solid gray;
+    border-radius: 30px;
+    background: lightgray;
+}
+
+.active{
+
+}
+
+.active:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,129,255,1) 0%, rgba(3,117,207,1) 82%);
 }
 
 .isLoading {
     display: flex;
 }
 
-.btnDisabled {
-    display: none;
-}

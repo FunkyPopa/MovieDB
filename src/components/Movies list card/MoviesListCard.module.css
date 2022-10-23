@@ -1,9 +1,7 @@
-img {
+.poster {
     width: 350px;
-}
-
-hr {
-    width: 320px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .card {
@@ -11,12 +9,71 @@ hr {
     margin: 10px;
 
     width: 350px;
-    border: black 1px solid;
+    border-radius: 30px;
 
     position: relative;
 }
 
 .cardInfo {
+    height: 300px;
     padding: 20px;
 }
+
+.title {
+    height: 60px;
+}
+
+.title p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.overview {
+    height: 180px;
+    display: block;
+    overflow: clip;
+    overflow: auto;
+}
+
+.overview p {
+    margin: 0;
+    color: #676f77;
+}
+
+.date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stars {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.card:hover {
+    cursor: default;
+}
+
+/* width */
+.overview::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+.overview::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+.overview::-webkit-scrollbar-thumb {
+    background: lightgray;
+}
+
+/* Handle on hover */
+.overview::-webkit-scrollbar-thumb:hover {
+    background: #0083FF;
+}
+
 
