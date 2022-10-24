@@ -18,7 +18,7 @@ const GenreList = () => {
 
     return(
         <div className={css.genres}>
-                {newGenresArr.map(genre => <Genre genre={genre}/>)}
+                {newGenresArr.map((genre, index) => <Genre genre={genre} key={index}/>)}
         </div>
     )
 }

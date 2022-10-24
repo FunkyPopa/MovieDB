@@ -16,7 +16,7 @@ const Genre = ({genre}) => {
     //logic of choosing genre
     const chooseGenre = (genre) => {
         //if button all, rerender all movies
-        {genre.name === 'All' && dispatch(movieActions.getAll())}
+        genre.name === 'All' && dispatch(movieActions.getAll())
         //packing values to pass it to reducer
         const params = {
             page: query.get('page'),
