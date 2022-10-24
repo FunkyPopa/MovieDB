@@ -26,6 +26,20 @@
     display: none;
 }
 
+/*Light*/
+.light {
+    background: white;
+    border-top: gray 1px solid;
+}
+
+/*Dark*/
+.dark {
+    background: #131f2a;
+    border-top: gray 1px solid;
+}
+
+
+
 .up:hover {
     cursor: default;
     background: rgb(2,0,36);

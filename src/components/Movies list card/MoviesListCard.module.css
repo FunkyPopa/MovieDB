@@ -52,6 +52,38 @@
     bottom: 0;
 }
 
+/*Light*/
+.light {
+    background: white;
+    transition: 1s;
+}
+
+.light .title {
+    background: none;
+    color: black;
+}
+
+.light .date {
+    background: none;
+    color: black;
+}
+
+/*Dark*/
+.dark   {
+    background: #111111;
+    transition: 1s;
+}
+
+.dark .title {
+    background: none;
+    color: white;
+}
+
+.dark .date {
+    background: none;
+    color: white;
+}
+
 .card:hover {
     cursor: default;
 }

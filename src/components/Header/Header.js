@@ -1,10 +1,8 @@
 import {useForm} from "react-hook-form";
 import {useDispatch, useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
-import {useEffect, useState} from "react";
 
 import css from './Header.module.css';
-import '../Theme style/theme.css'
 import {UserInfo} from "../User info/UserInfo";
 import {movieActions} from "../../store";
 import {urls} from "../../config";
@@ -29,7 +27,7 @@ const Header = ({handleClick, theme}) => {
     }
 
     return(
-        <div className={`${css.header} ${theme}`}>
+        <div className={`${css.header} ${theme === "dark" ? css.dark : css.light }`}>
             <img className={css.logo} src={urls.logo} alt="movieDB logo"/>
             {!hideSearch && <form onChange={handleSubmit(submit)}>
                 <input className={`${css.search} ${theme}`} type='text' {...register('query')}/>

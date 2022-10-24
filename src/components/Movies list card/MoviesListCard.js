@@ -33,17 +33,17 @@ const MoviesListCard = ({movie, theme}) => {
 
 
     return(
-        <div className={`${css.card} ${theme}`} onClick={() => movieInfo(movie)}>
+        <div className={`${css.card} ${theme === "dark" ? css.dark : css.light}`} onClick={() => movieInfo(movie)}>
             <GenreBadge genre_ids={genre_ids}/>
             <img className={css.poster} src={`${urls.image}/${poster_path}`} alt={title}/>
             <div className={css.cardInfo}>
-                <div className={`${css.title} ${theme}`}>
+                <div className={`${css.title} ${theme === "dark" ? css.dark : css.light}`}>
                     <b><p>{title}</p></b>
                 </div>
                 <div className={css.overview}>
                     <p>{overview}</p>
                 </div>
-                <p className={`${css.date} ${theme}`}>Release date: <span>{release_date}</span></p>
+                <p className={`${css.date} ${theme === "dark" ? css.dark : css.light}`}>Release date: <span>{release_date}</span></p>
             </div>
             <div className={css.stars}>
                 <hr/>

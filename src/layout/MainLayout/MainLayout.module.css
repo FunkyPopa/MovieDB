@@ -6,3 +6,15 @@ html, body {
     font-family: sans-serif;
     background: #d4d5c4;
 }
+
+/*Light*/
+.light {
+    background: #d4d5c4;
+    transition: 1s;
+}
+
+/*Dark*/
+.dark{
+    background: #000000;
+    transition: 1s;
+}

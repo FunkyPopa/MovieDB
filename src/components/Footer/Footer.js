@@ -13,7 +13,7 @@ const Footer = ({theme}) => {
     }
 
     return(
-        <div className={`${css.footer} ${theme}`}>
+        <div className={`${css.footer} ${theme === "dark" ? css.dark : css.light}`}>
             {!loading && <div className={`${css.up} ${hideButton && css.none}`} onClick={topFunction}>&#8593;</div>}
         </div>
     )

@@ -13,7 +13,7 @@ const MainLayout = () => {
     }
 
     return(
-        <div className={`${css.main} ${theme}`}>
+        <div className={`${css.main} ${theme === "dark" ? css.dark : css.light}`}>
             <Header handleClick={handleClick} theme={theme}/>
             <Outlet context={theme}/>
             <Footer theme={theme}/>

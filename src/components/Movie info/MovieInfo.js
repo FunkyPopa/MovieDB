@@ -17,22 +17,22 @@ const MovieInfo = ({theme}) => {
 
     return(
         <div className={css.wrapper}>
-            <div className={`${css.card} ${theme}`}>
+            <div className={`${css.card} ${theme === "dark" ? css.dark : css.light}`}>
                     <img className={css.poster} src={`${urls.image}/${poster_path}`} alt={title}/>
                     <div className={css.cardInfo}>
                         {adult === true && <div className={css.NFST}>18+</div>}
                         <p className={css.language}>Original language: <b><span>{original_language.toUpperCase()}</span></b></p>
-                        <p className={`${css.title} ${theme}`}>{original_title}</p>
+                        <p className={`${css.title} ${theme === "dark" ? css.dark : css.light}`}>{original_title}</p>
                         <GenreBadge genre_ids={genre_ids}/>
                         <div className={css.overview}>
                             <p className={css.overview}>{overview}</p>
                         </div>
-                        <div className={`${css.dateAndPop} ${theme}`}>
+                        <div className={`${css.dateAndPop} ${theme === "dark" ? css.dark : css.light}`}>
                             <p>Release date: {release_date}</p>
                             <p>Popularity: {popularity}</p>
                         </div>
                         <hr/>
-                        <div className={`${css.cardFooter} ${theme}`}>
+                        <div className={`${css.cardFooter} ${theme === "dark" ? css.dark : css.light}`}>
                             <p>Voted: {vote_count}</p>
                             <div className={css.rating}>
                                 <p className={css.vote}>{vote_average}</p>

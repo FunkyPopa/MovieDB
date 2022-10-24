@@ -102,6 +102,47 @@
     background: lightgray;
 }
 
+/*Light*/
+.light {
+    background: white;
+    transition: 1s;
+}
+
+.light .title {
+    background: none;
+    color: black;
+}
+
+.light .dateAndPop {
+    background: none;
+    color: black;
+}
+
+.light .cardFooter {
+    background: none;
+    color: black;
+}
+
+/*Dark*/
+.dark {
+    background: #111111;
+    transition: 1s;
+}
+
+.dark .title {
+    background: none;
+    color: white;
+}
+
+.dark .dateAndPop {
+    background: none;
+    color: white;
+}
+
+.dark .cardFooter {
+    background: none;
+    color: white;
+}
 .NFST:hover {
     cursor: default;
 }
