@@ -1,0 +1,33 @@
+.footer {
+    height: 98px;
+    background: white;
+    border-top: black 1px solid;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.up {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid gray;
+    border-radius: 50px;
+    background: lightgray;
+    font-size: 30px;
+}
+
+.none{
+    display: none;
+}
+
+.up:hover {
+    cursor: default;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,129,255,1) 0%, rgba(3,117,207,1) 82%);
+}

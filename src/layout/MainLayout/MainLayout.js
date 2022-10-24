@@ -1,8 +1,8 @@
 import {Outlet} from "react-router-dom";
+import {useState} from "react";
 
 import css from './MainLayout.module.css'
-import {Header} from "../../components";
-import {useState} from "react";
+import {Footer, Header} from "../../components";
 
 const MainLayout = () => {
 
@@ -16,6 +16,7 @@ const MainLayout = () => {
         <div className={`${css.main} ${theme}`}>
             <Header handleClick={handleClick} theme={theme}/>
             <Outlet context={theme}/>
+            <Footer theme={theme}/>
         </div>
     )
 }

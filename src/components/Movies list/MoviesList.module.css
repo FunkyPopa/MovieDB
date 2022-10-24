@@ -28,25 +28,23 @@
 
 .btn {
     height: 50px;
-    width: 200px;
+    width: 50px;
 
     margin: 10px;
 
     border: 1px solid gray;
-    border-radius: 30px;
+    border-radius: 50px;
     background: lightgray;
+    font-size: 30px;
+
 }
 
-.active{
-
+.isLoading {
+    display: flex;
 }
 
 .active:hover {
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,129,255,1) 0%, rgba(3,117,207,1) 82%);
-}
-
-.isLoading {
-    display: flex;
 }
 

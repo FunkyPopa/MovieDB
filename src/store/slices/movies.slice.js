@@ -10,7 +10,7 @@ const initialState = {
     error: null,
     loading: false,
     hideButton: false,
-    hideSearch: false
+    hideSearch: false,
 };
 
 const getAll = createAsyncThunk(
@@ -61,6 +61,7 @@ const moviesSlice = createSlice({
             state.currentMovie = action.payload.movie;
             state.currentPage = action.payload.page;
             state.hideSearch = true;
+            state.hideButton = true;
         }
     },
     extraReducers: builder =>
@@ -89,6 +90,11 @@ const moviesSlice = createSlice({
                 state.loading = false;
                 state.hideButton = false;
                 state.hideSearch = false;
+            })
+            .addCase(searchMovieByGenre.pending, (state, action) => {
+                state.loading = true;
+                state.error = null;
+                state.hideButton = true;
             })
             .addDefaultCase((state, action) => {
                 const {pathElement} = action.type.split('/').splice(-1);

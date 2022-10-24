@@ -46,6 +46,11 @@
     color: black;
 }
 
+.light .Footer_footer__sfa-2  {
+    background: white;
+    border-top: gray 1px solid;
+}
+
 
 /*Dark*/
 .dark{
@@ -65,7 +70,6 @@
 
 .dark .MoviesListCard_card__ClIFd {
     background: #111111;
-    transition: 1s;
 }
 
 .dark .MoviesListCard_title__OEpKi {
@@ -95,4 +99,9 @@
 .dark .MovieInfo_cardFooter__s91ql{
     background: none;
     color: white;
+}
+
+.dark .Footer_footer__sfa-2  {
+    background: #131f2a;
+    border-top: gray 1px solid;
 }

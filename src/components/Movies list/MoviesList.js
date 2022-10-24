@@ -7,6 +7,7 @@ import {movieActions} from "../../store";
 import {MoviesListCard} from "../Movies list card/MoviesListCard";
 import {GenreList} from "../Genre list/GenreList";
 
+
 const MoviesList = ({theme}) => {
     const {movies, loading, hideButton,currentMovie} = useSelector(state => state.movieReducer);
     const dispatch = useDispatch();
@@ -35,10 +36,10 @@ const MoviesList = ({theme}) => {
                 </div>
                 <div className={css.btnWrapper}>
                     <button className={`${css.btn} ${query.get('page') !== '1' && css.active}`} hidden={hideButton} onClick={prevPage}
-                            disabled={query.get('page') === '1'}>Prev
+                            disabled={query.get('page') === '1'}>&#x276E;
                     </button>
                     <button className={`${css.btn} ${query.get('page') !== '500' && css.active}`} hidden={hideButton} onClick={nextPage}
-                            disabled={query.get('page') === '500'}>Next
+                            disabled={query.get('page') === '500'}>&#x276F;
                     </button>
                 </div>
 
