@@ -5,7 +5,6 @@ import css from './StarsRating.module.css';
 
 const StarsRating = ({vote_average}) => {
 
-
     return(
         <form className={css.starRating}>
             <StarRatings

@@ -6,16 +6,3 @@ html, body {
     font-family: sans-serif;
     background: #d4d5c4;
 }
-
-/*Light*/
-
-.light {
-    background: #d4d5c4;
-}
-
-/*Dark*/
-
-.dark {
-    background: #000000;
-}
-

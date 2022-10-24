@@ -1,7 +1,6 @@
-import {MoviesList} from "../../components";
 import {useOutletContext} from "react-router-dom";
 
-
+import {MoviesList} from "../../components";
 
 const MoviesPage = () => {
     const theme = useOutletContext();

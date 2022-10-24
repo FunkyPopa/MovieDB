@@ -22,6 +22,7 @@ const MoviesListCard = ({movie, theme}) => {
 
 
     const movieInfo = (movie) => {
+        //packing values to pass it to reducer
         const data = {
             movie: movie,
             page: query.get('page')

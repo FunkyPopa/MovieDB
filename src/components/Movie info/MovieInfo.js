@@ -8,10 +8,11 @@ import {StarsRating} from "../Stars rating/StarsRating";
 
 const MovieInfo = ({theme}) => {
     const {currentMovie, currentPage} = useSelector(state => state.movieReducer);
+    //getting promise
     const {adult,genre_ids,original_language,original_title,
             overview,popularity,poster_path,release_date,title,
                 vote_average,vote_count} = currentMovie;
-
+    //navigate
     const navigate = useNavigate();
 
     return(
