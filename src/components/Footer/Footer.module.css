@@ -30,12 +30,14 @@
 .light {
     background: white;
     border-top: gray 1px solid;
+    transition: 1s;
 }
 
 /*Dark*/
 .dark {
     background: #131f2a;
     border-top: gray 1px solid;
+    transition: 1s;
 }
 
 

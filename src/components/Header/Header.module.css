@@ -58,9 +58,10 @@
 
 }
 
-.search .light{
+.light .search{
     background: white;
     border: 1px gray solid;
+    transition: 1s;
 }
 
 /*Dark*/
